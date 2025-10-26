@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main_box {
+            width: 300px;
+            height: 600px;
+            border: 1px solid black;
+            margin: 0 auto;
+            margin-top: 100px;
+            position: relative;
+            background-color: white;
+        }
+
+        .sub_box1 {
+            width: 275px;
+            height: 550px;
+            /* border: 1px solid black; */
+            margin: 0 auto;
+            margin-top: 25px;
+            position: relative;
+            background-color: white;
+        }
+
+        .sub_box2 {
+            width: 275px;
+            height: 40px;
+            border-bottom: 1px solid lightgray;
+            margin: 0 auto;
+        }
+
+        .sub_box2::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .sub_box2_1 {
+            float: left;
+            font-weight: 500;
+        }
+
+        .sub_box2_2 {
+            float: left;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+
+        .sub_box3 {
+            width: 275px;
+            height: 350px;
+            /* border: 1px solid black; */
+            margin: 0 auto;
+            margin-top: 25px;
+            position: relative;
+            /* background-color: white; */
+        }
+        .text {
+            width: 250px;
+            padding: 8px;
+            font-size: 16px;
+        }
+        #submit_b {
+            width: 270px;
+            height: 40px;
+            background-color: blue;
+            border: 0px;
+            color: white;
+        }
+        #text_1 {
+            text-align: center;
+            font-size: 13px;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main_box">
+        <div class="sub_box1">
+            <div>
+                <h2 style="font-weight:250">지금 가입하시면</h2>
+                <h2 style="font-weigth:500">웰컴쿠폰을 드려요!</h2>
+            </div>
+            <br>
+            <div class="sub_box2">
+                <p class="sub_box2_1">로그인</p>
+                <p class="sub_box2_2">회원가입</p>
+            </div>
+            <div class="sub_box3">
+                <div class="sub_box3_1">
+                    이메일<br>
+                    <input class="text" type="text" name="email" value="이메일을 입력해주세요" style="opacity: 0.5;">
+                    <br><br>이름/업체명<br>
+                    <input class="text" type="text" name="name" value="2자 이상 20자 이하" style="opacity: 0.5;">
+                    <br><br>비밀번호<br>
+                    <input class="text" type="text" name="password" value="영문 숫자 특수문자 조합 6-16자리" style="opacity: 0.5;">
+                    <br><br>비밀번호 확인<br>
+                    <input class="text" type="text" name="password" value="비밀번호를 다시 입력해주세요" style="opacity: 0.5;">
+                </div>
+                <label for="cb">
+                    <input type="checkbox" id="cb"><span style="font-size: 12px;"><u>개인정보수집이용안내</u> 및 <u>약관</u>에 동의합니다</span>    
+                </label>
+                <br>
+                <!-- <input id="submit_b" type="submit" value="회원 가입하기"> -->
+                <label for="submit_b">
+                    <button id="submit_b">회원 가입하기</button>
+                </label>
+                <br>
+                <div id="text_1">SNS로 간편하게 가입하기</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
