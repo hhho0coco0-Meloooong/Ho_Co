@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하이퍼텍스트 링크</title>
+</head>
+<body>
+    <h1>a 태그</h1>
+
+    <p>
+        a 태그 : 웹 페이지 연결, url 연결 시 사용 -> 다른 페이지 전환(메뉴표현)
+        글자와 나열되는 성격
+        링크 연결 시 기본 스타일(글자색, 밑줄)
+        <!-- 연결방법 
+        1. 인터넷 주소(url) : https:// (필수 요소!)
+        -->
+        <!-- <a href="가보자 하는 경로(주소)" -->
+        <a href="https://www.naver.com/">네이버 이동</a><br>
+
+        <!-- 임시 링크 # : 클릭을 해도 이동하지 않는다. -->
+        <a href="#">임시링크</a><br>
+
+        <!-- 메일(mailto), 전화(tel), 문자(sms) -->
+        <a href="mailto:dpcks2553@naver.com">메일</a>
+
+        <!-- 새창 전환 
+        target : 링크된 문서를 클릭했을 때 문서가 열릴 위치를 지정 
+        _self = 기본 값 / 현재의 브라우저에서 전환
+        _blank = 새창 전환 / 새로운 도메인창을 열 떙
+        -->
+        <a href="https://www.naver.com/" target="_blank">네이버 이동(새창)</a><br>
+    
+        <!-- 메뉴를 눌러 서브 페이지로 전환(다른 페이지로 이동) -->
+        <a href="day05(subpage).html">subPage</a>
+        
+    </p>
+</body>
+</html>
