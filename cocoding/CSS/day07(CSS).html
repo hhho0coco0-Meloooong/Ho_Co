@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 속성</title>
+
+    <style>
+        * {
+            margin : 0;
+            padding : 0;
+        }
+
+        body {
+            /* background-color: lightgreen; */
+            color : lightgoldenrodyellow;
+            /* background-image: url(/bg.png); */
+            /* 배경이미지 속성 : url(이미지 경로) 
+            이미지 사이즈가 부모의 사이즈보다 작을 때, 자동으로 반복되는 성격 
+            공간, 내용물이 있는 상태에서 나타남 */
+            background-repeat : no-repeat;
+            /* 배경 이미지 반복 속성 
+            no-repeat : 반복 제거 
+            repeat-x : 가로 반복 
+            repeat-y : 세로 반복 
+            repeat : 반복(기본 값) */
+
+            background-size : 100%;
+            /* 배경이미지 사이즈 x(가로) y(세로) px % 단위 사용가능 */
+        }
+
+        #art {
+            color : #ffffff; 
+            /* 여섯 자리 컬러코드(헥스) */
+        }
+
+        .text {
+            color : lightskyblue;
+            /* 글자색상 : 단어 or hex */
+            font-size : 20px;
+            /* 글자크기 */
+            font-weight : 900;
+            /* 글자굵기 : 100 ~ 900(100 ~ 300 가늘게 / 400 ~ 600 중간 / 700 ~ 900 굵게)*/
+            /* 서체마다 굵기가 적용되지 않을 수 있음 */
+            /* 글자 굴기는 단어로도 적용 가능(nomal, bold, bolder, lighter 등) */
+            line-height: 50px;
+            /* 행간, 줄 간격 [px, em, pt, % 단위 사용가능] */
+            font-family : "궁서";
+            /* 글꼴 : 내 컴퓨터에 저장된 글자가 표현(웹 폰트는 예외) */
+            font-style : italic;
+            /* 글자스타일 : italic, nomal, ... 등*/
+            letter-spacing : 10px;
+            /* 자간, 글자사이의 간격 [px, em, pt, % 단위 사용가능] */
+            text-align : center;
+            /* 글자 정렬(left   center  light) */
+
+        }
+
+        a { /* a 태그 사용 시, 기본 적용! */
+            text-decoration : none;
+            /* 글자를 꾸며주는 속성(a 태그에 대한 기본값 : none 밑줄 제거) : none, overling, underline, .. 등*/
+            color : lightskyblue;
+        }
+
+        h1 {
+            /* background-color : limegreen; */
+
+        }
+
+        p {
+            background-image: url(/bg.png);
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1 id="art">아트윅 컨셉드로잉</h1> -->
+
+    <!-- <h1 class="text">글자관련 <a href="#">속성</a></h1>
+    <p>
+        글자관련 속성들에 대해 알아봅시다!<br>
+        글자 속성들의 종류
+        
+    </p> -->
+
+    <h1>배경관련 속성</h1>
+    <p>
+        배경색을 넣거나, 배경이미지를 넣어서 공간을 활용!<br>
+        배경색을 넣거나, 배경이미지를 넣어서 공간을 활용!<br>
+        배경색을 넣거나, 배경이미지를 넣어서 공간을 활용!<br>
+        배경색을 넣거나, 배경이미지를 넣어서 공간을 활용!<br>
+        배경색을 넣거나, 배경이미지를 넣어서 공간을 활용!<br>
+    </p>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 기초 선택자</title>
+    <!-- <link href="style.css" rel="stylesheet" type="text/css"/> 외부 스타일 시트 CSS 적용방법 -->
+    <style>
+        /* * 전체 선택자 */
+        * { 
+            padding : 0; /* 안쪽 여백 */
+            margin : 0; /* 바깥 여백 */
+            /* color : lightgreen; 글자 색 */
+        }
+
+        /* h1 {
+            color : lightgreen;
+        }
+
+        p {
+            color : lightpink;
+        } */
+
+        #aa {
+            color : lightsalmon;
+        }
+
+        #bb {
+            color : lightgoldenrodyellow;
+        }
+        
+        .cc {
+            font-size : 50px; /* 글자 사이즈 */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>
+        전체 선택자
+    </h1>
+
+    <p>
+        */ html 내에 등장하는 모든 형태를 선택하는 선택자(초기화, 기본 설정값)
+    </p><br><br><br>
+
+    <h1 id="bb">태그 선택자</h1>
+    <p>h1, h2, p, a, img ... 등 : html 내에 등장하는 특정한 태그를 선택하는 선택자</p>
+    <br><br><br>
+
+    <h1 id="aa">아이디 선택자</h1>
+    <p>
+        id : 본문(id = "name") / 스타일 (#) 으로 접근
+        특정한 이름을 부여하여 선택하는 선택자로, html 화면 내에서 하나의 이름으로 한 번만 사용가능
+        주로 큰 단락, 부모에서 사용, 위치이동, 이름
+    </p><br><br><br>
+
+    <h1 class="cc">클래스 선택자</h1>
+    <p style="color:lightblue;"> 
+        <!-- 인라인 스타일 적용(사용하지 않는 것을 추천) 
+        주로 외부 스타일 방법을 진행! -->
+        : 본문(class="name") / 스타일(.)<br>
+        특정한 이름을 부여하여 선택하는 선택자로, html 화면 내에서 하나의 이름으로 여러 번 사용가능<br>
+        주로 작은 요소, 작은 단락, 변화가 잦을 스타일
+    </p>
+
+</body>
+</html>
