@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box</title>
+
+    <style>
+        * {
+            margin : 0;
+            padding : 0;
+        }
+
+        .box_1 {
+            width: 100%;
+            /* % : 지정 시, 부모의 대비 크기 지정(추가되는 요소를 포함하지 않으며, 넘치게 만들 수 있음)
+            auto : 부모 크기 대비 full(추가되는 요소에 포함하며, 폭 값을 유지) */
+            height: 100px;
+            background-color: lightgreen;
+        }
+
+        .box_2 {
+            width: auto;
+            height: 100px;
+            padding: 10px;
+            background-color: lightskyblue;
+        }
+
+        #main_box {
+            width: 500px;
+            height: 250px;
+            padding: 10px;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="main_box">
+        <div class="box_1">box1</div>
+        <div class="box_2">box2</div>
+    </div>
+</body>
+</html>
