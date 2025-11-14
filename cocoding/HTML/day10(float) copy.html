@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+
+    <style>
+        * {
+            margin : 0;
+            padding : 0;
+            /* box-sizing: 0; */
+        }
+
+        div {
+            width : 200px;
+            height : 200px;
+            border : 3px solid black;
+            /* padding : 20px; */
+            margin-right : 20px;
+
+            float : left;
+            /* 왼쪽 정렬 */
+        }
+
+        .box_3 {
+            /* float : right; */
+            /* 옆 박스의 영향을 주는 속성으로 나열하고자 하는 박스와 함께 나열 값 */
+
+            width : 200px;
+            height : 200px;
+            border : 3px solid black;
+        }
+
+        .box_4 {
+            width: 500px;
+            height: 300px;
+            margin: 0;
+
+            clear : both;
+            margin-top : 20px;
+        }
+
+        #main_box {
+            float : none;
+            border : none;
+            /* margin : 0 auto; */
+            width : 678px;
+            height : 206px;
+
+            background-color: aqua;
+        }
+
+        .box_5 {
+            padding : 20px;
+            box-sizing : border-box;
+            /* 패딩, 선을 폭 값 안에서 함께 표현 */
+        }
+    </style>
+</head>
+<body>
+    <div id="main_box">
+        <!-- float : 박스를 옆으로 나열할 때 사용 
+        레이아웃을 나열하거나 형성 + 삽화를 넣을 때 사용 -->
+        <div>box_1
+            <!-- <img src="/camera01.png" alt=""> -->
+            <!-- <h1>title</h1> -->  
+        </div>
+        <div>box_2</div>
+        <div class="box_3">box_3</div>
+    </div>
+    <!-- clear : float 과 함께 사용, float 값을 제거할 때 사용 
+    left 좌측 나열 제거 
+    right 우측 나열 제거 
+    both 양쪽 제거 --> 
+
+    <!-- <div class="box_4">
+        float 속성 제거용
+    </div> -->
+
+    <div class="box_5">
+        box5
+        <!-- box-sizing : 박스의 크기를 어떤 것의 기준으로 계산할지  -->
+    </div>
+</body>
+</html>
