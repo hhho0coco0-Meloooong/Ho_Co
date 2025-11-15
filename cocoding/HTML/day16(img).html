@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* background-image: url(/cat_bg.png), url(/land.png); */
+            /* 배경 이미지를 불러오는 속성, url(이미지의 경로), 이미지는 반복되는 성격 */
+            /* ,(쉼표)로 구분지어 배경이미지를 2장 이상 적용 가능 / 먼저 작성한 이미지가 상단에서 표현 */
+            /* background-image: url(/art.jpg); */
+            background-repeat: no-repeat;
+            /* 배경이미지 반복
+            no-repeat : 반복하지 않음 */
+
+            background-size: 500px 300px;
+            /* 배경이미지 사이즈 속성 (% 가로상의 비율) 
+            x y >> % px 적용가능 
+            cover : 화면상 꽉차게 표현, 가로 세로의 비율을 유지 
+            */
+
+            /* height: 3000px; */
+            /* background-attachment: fixed; */
+            /* attachment : 배경이미지를 어떤 방식으로 화면에서 표현할지 지정하는 속성 
+            scroll : 기본값
+            fixed : 배경이미지가 움직여도 화면상의 고정됨 */
+            
+            background-position: 200px 100px;
+            /* 배경이미지의 위치를 지정하여 표현 가능한 속성 
+            x축 y축 >> 단어, px, % 사용가능 
+            단어 x(left, right, center) y(top, center, bottom) */
+            
+            /* 배경이미지와 이미지의 차이 */
+        }
+
+        div {
+            /* width: 500px;
+            height: 500px; */
+            background-color: aqua;
+
+            background-image: url(/cat_bg.png);
+            background-size: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div>공간주기</div>
+
+</body>
+</html>
