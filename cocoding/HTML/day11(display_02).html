@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display 응용</title>
+
+    <style>
+        * {
+            margin : 0;
+            padding : 0;
+        }
+
+        body {
+            /* text-align : center; */
+            /* 글자 중앙 */
+        }
+        span {
+            border : 1px solid black;
+            width : 200px;
+
+            /* 인라인과 블록의 합성 성격, 글자와 같이 옆으로 나열,
+            블록과 같이 CSS에 대한 모든 적용이 이루어짐 */
+            display : inline-block;
+        }
+
+        .bk {
+            display : block;
+            width: 600px;
+            margin : 0 auto;
+            /* block 요소 중앙 정렬 */
+
+            display : none;
+            /* display : none; 안 보이게 처리 */
+        }
+
+        div {
+            background-color: lightblue;
+
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>span01</span>
+        <span>span02</span>
+        <span>span03</span>
+    </div>
+
+
+    <span class="bk">span04</span>
+    <span class="bk">span05</span>
+    <span class="bk">span06</span>
+
+</body>
+</html>
