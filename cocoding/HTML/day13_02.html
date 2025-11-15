@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다양한 선택자</title>
+
+    <style>
+        div>h1 {
+            /* div > h1 = div 자손 h1 */
+            background-color: brown;
+        }
+        
+        div span {
+            /* 후손 선택자(띄어쓰기) */
+            background-color: aquamarine;
+        }
+
+        div>h2 {
+            border: 3px solid #000;
+        }
+
+        div>span {
+            color : red;
+        }
+
+        .box_1 span {
+            font-size: 40px;
+        }
+
+        h1+h2 {
+            /* color: lightgreen; */
+        }
+
+        h1~h2 {
+            background-color: lightgreen;
+        }
+
+        h1:hover {
+            /* hover : 특정한 요소에 마우스를 올렸을 때 동작! */
+            background-color: lightblue;
+        }
+
+        h2:active {
+            /* active : 특정한 요소에 마우스를 클릭을 한 순간! */
+            color:lightpink
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 후손 선택자 & 자손 선택자 
+    후손 선택자 : 해당 요소의 하위 요소에 있는 특정한 요소를 모두 선택  
+    선택자a 선택자b(띄어쓰기)
+    자손 선택자 : 해당 요소의 바로 밑에 위치하는 특정한 요소를 선택
+    선택자a>선택자b(부등호) -->
+
+    <!-- <div>
+        <h1>제목1</h1>
+        <h2>제목2</h2>
+        <div class="box_1">
+            <ul>
+                <li>메뉴1</li>
+                <li>메뉴2</li>
+                <li><span>메뉴3</span></li>
+            </ul>
+        </div>
+        <h2>제목2</h2>
+        <span>span</span>
+    </div> -->
+
+    <!-- 동위 선택자(동일한 관계에 있는 요소 중 해당 요소보다 뒤에 존재하는 특정한 요소를 선택할 때 사용) 
+    선택자A + 선택자B : 선택자A 바로 뒤에 위치하는 선택자B를 선택 
+    선택자A ~ 선택자B : 선택자A 바로 뒤에 위치하는 선택자B 모두 선택 -->
+
+    <!-- 반응 선택자 : 사용자가 마우스를 이용해서 혹은 
+    특정한 행동(반응)을 취했을 때 CSS 속성을 지정할 수 있는 선택자 -->
+
+    <h1>제목1</h1>
+    <h2>제목2</h2>
+    <h2>제목3</h2>
+    <h2>제목4</h2>
+    <h2>제목5</h2>
+</body>
+</html>
