@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멀티미디어</title>
+</head>
+<body>
+    <h1>멀티미디어</h1>
+<!--     
+    html5에서 음악이나 오디오같은 사운드를 재생하기 위해 사용
+    태그 하나만으로 멀티미디어 기기에서 재생이 가능 
+    src="오디오 파일의 위치를 연결" 
+    controls="화면에서 재생 컨트롤 막대표시"
+    muted="오디오가 재생중이지만, 소리를 끔(음소거 처리)"
+    loop="반복재생"
+    -->
+    <audio src="/test_ado.mp3" controls muted loop></audio>
+
+    <!-- 다양한 인터넷을 위한 처리방법 -->
+    <audio controls>
+        <source src="/test_ado.mp3" type="audio/mp3">
+        <source src="/test_ado.ogg" type="audio/ogg">
+        <p>오디오 파일에 브라우저에서 지원되지 않습니다.</p>
+    </audio>
+
+    <!-- video : html5에서 영상을 실행시키기 위해 사용. 비디오와 같은 영상 스트리밍을 재생할 때 사용 
+    src="비디오 파일 링크를 연결"
+    controls="비디오 재생 컨트롤 막대 표시"
+    loop="반복 재생"
+    muted="음소거/비디오는 재생"
+    width="가로폭"
+    height="높이"
+    poster="비디오 재생 시작전 준비화면, 시작이미지(url연결) - 연결하지 않을 시, 영상의 시작화면"
+    -->
+    
+    <video src="/korea_video.mp4" controls muted
+    poster="/bg.PNG" width="400" height="200"></video> 
+    <!-- poster : 동영상 시작 전 이미지 지정 -->
+
+
+</body>
+</html>
