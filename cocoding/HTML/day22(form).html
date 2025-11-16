@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+
+    <style>
+        input[type="text"] {
+            background-color: lightgreen;
+            border: 3px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- 웹 페이지에서의 입력양식 그룹 / 
+    원하는 정보를 연결하여 전달받기 위한 명확한 폼 양식
+    
+    [폼에 쓰이는 속성]
+    name="폼의 이름/식별하기 위한 이름을 지정"
+    method="폼을 서버로 전송할 때, http 메소드를 지정(=전송방식)"
+    get="주소 표시줄에 사용자가 입력한 내용이 그대로 표시"
+    post="대부분이 사용하는 방식, 내부적으로 보이지 않게 전송"
+    -->
+    <form>
+        <!-- fieldset : 특정한 엘리멘트 그룹화 -->
+        <fieldset>
+            <!-- legend : fieldset 안에서 정의를 부여 -->
+            <legend>개인정보 작성</legend>
+            <!-- label : 해당 서식의 용도, 내용 -->
+            <label>ID</label>
+            <!-- input="서식" type="속성" name="이름" -->
+            <input type="text" name="id">
+
+            <br>
+            <label>PW
+            <input type="password" name="pw">
+            </label>
+
+            <br>
+            <input type="tel" placeholder="010-0000-0000" name="tel">
+            <!-- placeholder : 입력 양식 예시 -->
+            
+            <br>
+            <!-- 다중선택 -->
+            <input type="checkbox" name="ch">
+
+            <br>
+            <!-- 단일선택 -->
+            <input type="radio" name="r">
+
+            <br>
+            <input type="submit" value="제출하기" name="btn">
+            <input type="reset" value="취소하기" name="btn">
+
+            <!-- 버튼태그 일반버튼 형태 -->
+            <button type="button">버튼</button>
+
+            <br>
+            <!-- 셀렉트박스 : 펄쳐진 상태에서 항목을 고르는 서식 -->
+            <select>
+                <option>항목1</option>
+                <option>항목2</option>
+                <option>항목3</option>
+                <option>항목4</option>
+                <option>항목5</option>
+            </select>
+
+            <br>
+            <!-- 많은 내용의 글을 넣을 때 사용하는 태그(여러 줄 text 박스) -->
+            <textarea></textarea>
+        </fieldset>
+    </form>
+</body>
+</html>
