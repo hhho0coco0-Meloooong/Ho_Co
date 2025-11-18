@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .p1 {
+            width: 300px;
+            height: 300px;
+            background-color: lightgreen;
+            text-align: center;
+            line-height: 300px;
+            font-size: 30px;
+
+            position: fixed;
+            /* 
+            static : 기본값(위치 영향을 받지 않음)
+            relative : 상대위치(박스가 나열되는 순서대로 위치가 지정)
+            absolute : 절대위치(html 화면기준으로 위치가 지정 - 위치값 모두적용)
+            부모가 존재할 때, 부모의 기준으로 위치가 지정
+            fixed : 고정위치(html 화면기준으로 위치가 지정 : 위치 모두적용)
+            고정된 상태로 표현 - 메뉴, 배너
+            위치지정 시, 사용가능한 송석 : left, right, top, bottom */
+            bottom: 50px;
+            right: 50px;
+        }
+
+        body {
+            /* height: 3000px; */
+        }
+
+        .pbox {
+            width: 200px;
+            height: 200px;
+            background-color: lightgreen;
+            text-align: center;
+            line-height: 200px;
+
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+
+        .pbox:nth-child(1) {
+            z-index: 3;
+            /* 위치요소의 우선순위를 변경하는 속성 */
+        }
+        .pbox:nth-child(2) {
+            background-color: lightpink;
+            position: absolute;
+            top: 60px;
+            left: 60px;
+            z-index: 4;
+        }
+
+        .pbox:nth-child(3) {
+            background-color: lightskyblue;
+
+            position: absolute;
+            top: 90px;
+            left: 90px;
+        }
+
+        #position {
+            width: 400px;
+            height: 200px;
+            background-color: lightslategray;
+
+            /* margin: 100px; */
+
+            position: relative;
+            /* 부모기준을 삼으며, 다른 박스의 영향을 받아 
+            레이아웃이 제대로 표현되어질 수 있게! */
+        }
+
+        .menu {
+            width: 100%;
+            height: 200px;
+            text-align: center;
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>position</h1>
+    <p>요소를 특정한 위치로 지정하여 배치하는 속성
+        어떻게 위치할지 결정하는 속성
+    </p>
+
+    <div class="p1">
+        position
+    </div> -->
+
+    <!-- 위치값을 사용하는 방법 -->
+
+    <div class="menu"></div>
+
+    <div id="position">
+        <div class="pbox">box1</div>
+        <div class="pbox">box2</div>
+        <div class="pbox">box3</div>
+    </div>
+</body>
+</html>
