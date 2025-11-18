@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform 변형속성</title>
+
+    <style>
+        * {padding:0; margin: 0;}
+
+        section {
+            width: 300px;
+            height: 300px;
+            border: 5px solid #000;
+            margin: 100px;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: lightgreen;
+            text-align: center;
+            line-height: 300px;
+
+            font-size: 20px;
+            font-weight: 900;
+
+            transform-origin: right top;
+            /* 요소의 중심기점을 변경 -> 고정(X, Y) px % 단어 
+            X - left, right, center(단어) 
+            Y - top, bottom, center */
+        }
+
+        div:hover {
+            transition-duration: 0.5s;
+            transform: translate(100px, 100px);
+            transform: translateX(100px);
+            transform: translateY(100px);
+            /* translate : translate(x, y)
+            특정한 위치로 이동  (x축, y축) - px % */
+
+            transform: scale(1.5, 1.5);
+            transform: scale(0.5, 0.5);
+            transform: scaleX(2);
+            transform: scaleY(2);
+            /* scale : 사이즈 확대 또는 축소 - 배수사용 - 0.9 < 1 < 1.1 */
+
+            transform: rotate(-90deg);
+            transform: rotateX(90deg);
+            transform: rotateY(90deg);
+            /* rotate : 특정한 값만큼 회전(기본 : 시계방향) - 각도(deg) 
+            -(마이너스 적용) : 반시계 방향으로 진행 
+            X 축으로 회전, Y 축으로 회전 */
+
+            transform: skew(45deg, 45deg);
+            transform: skewX(45deg);
+            transform: skewY(45deg);
+            /* skew(deg) : 특정한 각도로 기울이기, 왜곡 적용 */
+
+            transform: rotate(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>transform</div>
+    </section>
+</body>
+</html>
