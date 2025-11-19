@@ -1,0 +1,62 @@
+<?php
+session_start();
+
+// PC_MODE 기본값 설정
+$PC_MODE = $PC_MODE ?? "";
+
+// 접속기기 인식 함수
+if(!function_exists("is_moblile"))
+{
+    function is_moblile()
+    {
+        $connet_m = $_SERVER['HTTP_USER_AGENT'];
+        if(strpos($connet_m, "iPhone") > -1){
+            return "아이폰";
+        }
+        if(strpos($connet_m, "Android") > -1){
+            return "안드로이드";
+        }
+        return 0;
+    }
+}
+
+// PC 강제모드
+if(isset($PC_MODE) && $PC_MODE == 'true'){
+    $_SESSION['PC_MODE'] = "true";
+}
+
+// 모바일 접속이면 이동
+if(is_moblile() && (!isset($_SESSION['PC_MODE']) || $_SESSION['PC_MODE'] != "true"))
+{
+    header("location:http://hhho0coco1.dothome.co.kr/mobile.html");
+    exit;
+}
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOBILEWEB(PC)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: lightslategray;
+            color: #fff;
+        }
+        h1 {
+            padding-top: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>PC접속화면<br>(모바일 기기 접속 시, 화면전환 되어집니다.)</h1>
+</body>
+</html>
