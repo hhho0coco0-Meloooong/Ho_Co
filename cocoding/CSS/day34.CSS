@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 가변 그리드 
+px : 고정값 
+% : 비율깂(부모의 폭의 기준으로 양이 결정 = 비율 
+
+공식
+요소의 넓이 / 요소의 부모 넓이 = 값 * 100 = 넓이값 %
+*/
+#wrap {
+    width: 63.15%; 
+    /* 1200 / 1900 = 0.6315 * 100 = 63.15% */
+    overflow: hidden;
+    margin: 150px auto;
+    background-color: lightgreen;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: lightcoral;
+}
+
+section {
+    width: 51.66%;
+    /* 620 / 1200 = 0.5166 * 100 = 51.66% */
+    float: left;
+    height: 200px;
+    background-color: lightskyblue;
+
+}
+
+aside {
+    width: 45%;
+    /* 540 / 1200 = 0.45 * 100 = 45% */
+    float: right;
+    height: 200px;
+    background-color: lightgoldenrodyellow;
+}
+
+footer {
+    width: 100%;
+    background-color: lightseagreen;
+    height: 100px;
+    clear: both;
+    /* float 속성을 무시 */
+}
+
+img {
+    max-width: 100%;
+    /* 요소가 가지는 최대 너비를 설정한 값으로 최대폭을 유지하겠다는 뜻 */
+}
