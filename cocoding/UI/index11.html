@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid 레이아웃 활용</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: lightblue;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 150px);
+            grid-template-rows: repeat(4, 100px);
+            gap: 10px;
+            height: 70vh;
+            /* 정렬 - flex와 유사 */
+            /* align-items: stretch; 기본값 */
+            /* align-items : 세로방향에 정렬(start, center, end) */
+            /* justify-items: center; */
+            /* 가로방향에 정렬 */
+            /* place-items: align justify;*/
+
+            /* 정렬 - 그룹의 정렬 */
+            align-content: space-around; /* 세로방향 그룹 정렬 */
+            justify-content: space-between;
+            /* place-content: align justify */
+            
+        }
+
+        .item {
+            background-color: lightgreen;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">grid-1</div>
+        <div class="item">grid-2</div>
+        <div class="item">grid-3</div>
+        <div class="item">grid-4</div>
+        <div class="item">grid-5</div>
+        <div class="item">grid-6</div>
+        <div class="item">grid-7</div>
+        <div class="item">grid-8</div>
+        <div class="item">grid-9</div>
+        <div class="item">grid-10</div>
+        <div class="item">grid-11</div>
+        <div class="item">grid-12</div>
+    </div>
+</body>
+</html>

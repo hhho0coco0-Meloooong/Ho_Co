@@ -1,0 +1,143 @@
+.momo-trust-display-regular {
+    font-family: "Momo Trust Display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/* 구글폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    /* font-family: "Source Code Pro"; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+body {
+    font-size: 18px;
+    color: #333;
+    background-color: #ecddcc;
+}
+
+.grid {
+    display: grid;
+    /* item 모두 그리드의 속성 표현이 가능한 요소 */
+}
+
+/* main */
+main {
+    width: 100%;
+    height: 100vh;
+    border: 1px solid black;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+main .item:nth-child(1) {
+    border-right: 1px solid black;
+    background: url(/cocoding/UI/bg.jpg) no-repeat center center;
+    background-size: 60%;
+    filter: grayscale(60%);
+    /* 이미지에 회색조 적용 */
+}
+
+main .item:nth-child(2) {
+    padding: 50px;
+    display: grid;
+    /* 안쪽 title 정렬 */
+}
+
+main .title {
+    align-self: end;
+}
+
+main button {
+    border: 1px solid #000;
+    padding: 12px 80px;
+    background-color: #ecddcc;
+    margin-top: 20px;
+}
+
+#nav {
+    display: block;
+    /* 글자 성격 박스로 변환 -> 폭 부여 */
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    position: fixed;
+    top: 5vh;
+    right: 5vw;
+    border: 1px solid #000;
+}
+
+#nav span {
+    display: block;
+    width: 100%;
+    height: 10%;
+    background-color: #000;
+}
+
+#nav span:nth-child(2) {
+    margin: 31% 0;
+}
+
+/* section */
+section {
+    width: 100%;
+    height: 30vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+article:nth-child(1) {
+    border-right: 1px solid black;
+    padding: 50px;
+}
+
+article:nth-child(1) .item {
+    align-self: end;
+}
+
+article:nth-child(2) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+article:nth-child(2) .bg {
+    border-right: 1px solid black;
+    background: url(/cocoding/UI/bg2.jpg) no-repeat;
+    background-size: cover;
+    /* 이미지를 배경에 적용할 때, 배경 영역의 
+    가로·세로 길이에 맞춰 이미지를 100%로 늘려 꽉 차게 채우는 방식 */
+    filter: grayscale(100%);
+    /* 완전한 흑백(그레이스케일) 효과를 적용(회색조) */
+}
+
+article:nth-child(2) .item:nth-last-child(2) {
+    align-self: center;
+    /* 개인의 값만 설정한 위치로 이동 */
+    padding: 50px;
+}
+
+footer {
+    width: 100%;
+    padding: 5vh 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    font-size: 14px;
+}

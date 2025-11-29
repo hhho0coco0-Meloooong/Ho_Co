@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table 레이아웃</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            height: 300px;
+            margin: auto;
+            border: 2px solid black;
+
+            /* 기본값 table
+            dispaly : table(table 을 만들어주는 성격) 
+            box-sizing : border-box (padding, border 폭 안으로 표현) */
+        }
+
+        td {
+            border: 1px solid black;
+            /* 일정한 폭이 생성, 글자 수직상 중앙정렬
+            display : table-cell
+            verical-aling : middle
+            */
+
+            text-align: center;
+        }
+
+        div {
+
+            width: 80%;
+            height: 300px;
+            margin: 100px auto;
+            border: 2px solid black;
+
+            /* display: table로 변환 > 부모박스(height) */
+            display: table;
+        }
+
+        p {
+            /* 일반박스상태 */
+            /* float: left;
+            border: 1px solid black;
+            text-align: center;
+            width: 50%;
+            box-sizing: border-box;
+            line-height: 300px; */
+
+            /*  */
+            display: table-cell; 
+            /* td : 열 */
+            box-sizing: border-box;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <!-- 표를 만드는 태그 -->
+    <table>
+        <tr>
+            <!-- 줄 -->
+            <td>table-tset<br>table-display<br>table-display</td>
+            <td>table-tset<br>table-display<br>table-display</td>
+            <!-- 칸 -->
+        </tr>
+    </table>
+
+    <div>
+        <p>table-display<br>table-display<br>table-display</p>
+        <p>table-display<br>table-display<br>table-display</p>
+        <p>table-display<br>table-display<br>table-display</p>
+        <p>table-display<br>table-display<br>table-display</p>
+    </div>
+
+</body>
+</html>

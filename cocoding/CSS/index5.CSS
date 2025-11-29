@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* 
+ display : table
+ > table 성격으로 변환
+ - border-spaciong: 2px(기본값)
+
+ display: table-cell
+ > td의 성격 / 자동으로 폭 분배
+ > 수직상 중앙정렬 가능
+
+ display: table-row
+ > tr의 성격
+*/
+
+main {
+    height: 80vh;
+    width: 100%;
+
+    background-color: lightskyblue;
+    color: white;
+    font-size: 20px;
+    /* 부모 */
+    display: table;
+    border-spacing:  10vw;
+}
+
+div {
+    /* 자식 */
+    display: table-cell;
+    vertical-align: middle;
+    /* 수직 - 중앙 */
+}
+
+img {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+section {
+    display: table;
+    width: 65%;
+    height: 30vh;
+    margin: 5vh auto;
+    background-color: lightgreen;
+
+    border-spacing: 1vw;
+    table-layout: fixed;
+}
+/* 1) 간격의 경우 - spacing 활용 */
+/* 2) ★ td 칸은 내용물의 양에 따라 자동으로 넓이가 분배 */
+/* table-layout: fixed(칸의 넓이를 고정할지 말지의 유무)*/
+
+
+article {
+    display: table-cell;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* border-radius : 모서리 둥글게 만들기 */
+
+    padding: 2%;
+    font-size: 13px;
+}

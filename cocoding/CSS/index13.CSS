@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+
+
+
+
+/* https://fontawesome.com/ */
+
+* {
+    padding: 0; margin: 0; box-sizing: border-box;
+    font-family: 'Lilita One', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,li,ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-size: 18px;
+    color: #333;
+}
+
+h1 {
+    font-family: 'Lilita One', cursive;
+}
+
+/* header */
+
+header {
+    width: 100%;
+    height: 10vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header>a {
+    display: block;
+    float: left;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 10vh;
+    padding: 0 40px;
+}
+
+header ul {
+    float: right;
+    display: flex; /* item > li(한 줄 정렬 = row) */
+    height: 10vh;
+    align-items: center;
+}
+
+header li {
+    padding: 0 30px;
+    font-weight: 700;
+}
+
+/* main */
+main {
+    width: 100%;
+    height: 80vh;
+    background: url(/cocoding/UI/mainbg.png) no-repeat;
+    background-size: cover;
+    color: #2ba0ff;
+    font-size: 20px;
+
+    display: table; /* table 성격으로 변환 */
+}
+
+main .title {
+    display: table-cell; /* 칸의 성격으로 변환 */
+    vertical-align: middle; /* 수직 상 중앙정렬 */
+    text-align: center;
+    font-size: 16px;
+}
+
+main .title h1 {
+    font-size: 80px;
+    margin-bottom: 30px;
+    line-height: 85px;
+}
+
+/* felx */
+#flex {
+    width: 100%;
+    overflow: hidden;
+    padding: 15vh 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+#flex h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+#flex article {
+    width: 63%;
+    margin-top: 50px auto;
+    margin-bottom: 0;
+    display: flex; /* 안쪽의 요소가 row */
+    flex-wrap: wrap; /* 넘치는 경우 자동으로 줄 바꿈 */
+}
+
+#flex .item {
+    flex: 1 1 20%;
+    margin: 10px;
+    background-color: #ffc1e0;
+    border-radius: 100%;
+    padding: 10px;
+
+    /* vertical-align: middle; */
+}
+
+/* grid */
+
+#grid {
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+#grid article:nth-child(1) {
+    background: url(/cocoding/UI/gridleftBg.png) no-repeat;
+    background-size: cover;
+    padding: 50px;
+    font-size: 50px;
+}
+
+#grid article:nth-child(1) p{
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+#grid li {
+    list-style-type: circle;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+#grid article:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#grid .bg1 {
+    background: url(/cocoding/UI/gridrightBg_1.png) no-repeat;
+    background-size: cover;
+    padding: 50px;
+    font-size: 20px;
+    color: #fff;
+    display: grid;
+}
+
+#grid .bg1 button {
+    align-self: end;
+    width: 30%;
+    padding: 15px 0;
+    border: 1px solid white;
+    color: white;
+    background: none;
+}
+
+#grid .bg2 {
+    background: url(/cocoding/UI/gridrightBg_2.png) no-repeat;
+    background-size: cover;
+    padding: 50px;
+    font-size: 20px;
+    color: #f9b3d6;
+    
+    position: relative;
+    /* 하단의 링크 아이콘을 밑으로 배치 */
+}
+
+#grid .bg2>div {
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20%, auto));
+}
+
+#grid .bg2 a {
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 800;
+}
+
+#grid .bg2 i {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+footer {
+    width: 100%;
+    padding: 6vh 0;
+    background-color: #2f2f2f;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    font-size: 14px;
+}

@@ -1,0 +1,58 @@
+@media screen and (max-width: 1024px) {
+    header {
+        height: auto;
+        background-color: rgba(255,255,255,0.3);
+    }
+
+    header>a {
+        float: none;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    header ul {
+        float: none;
+        height: auto;
+        padding: 3vh 0;
+        justify-content: center;
+    }
+
+    main {
+        height: 100vh;
+    }
+
+    #flex article {
+        width: 90%;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    #flex .item {
+        flex: 1 1 30%;
+    }
+
+    #grid {
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    #grid article:nth-child(2) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    #grid .bg1,
+    #grid .bg2 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    #grid .bg1 button {
+        width: 60%;
+    }
+
+    #grid .bg2 i {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        .container {
+            padding: 10px;
+            background-color: lightblue;
+            display: grid;
+            /* grid : 부모요소에 적용  */
+
+            /* 수평방향의 분배값을 설정 - 단위(px, % ... 등) */
+            /* grid-template-columns: 100px 200px 300px 400px;  */
+            /* grid-template-columns: 10% 80% 10%; */
+            /* grid-template-columns: 1fr 500px 1fr; */
+            /* fraction : 분배, 분수 */
+
+            /* grid-template-columns: repeat(5, 1fr); */
+            /* repeat(반복횟수, 반복값) */
+            /* grid-template-columns: repeat(2, 1fr 3fr); */
+
+            /* minmax(최소값, 최대값) */
+            /* grid-template-columns: repeat(3, minmax(100px, 300px)); */
+
+            /* auto-fill / auto-fit : 개수를 떠나 화면을 꽉채우고자하는 속성 */
+            /* grid-template-columns: repeat(auto-fit, minmax(10%, auto)); */
+
+            /* 수평방향의 분배값을 설정 - 위의 값과 동일 */
+            grid-template-columns: repeat(2, 1fr);
+
+            /* grid-template-rows: 200px 200px 200px;
+            grid-template-rows: repeat(3, 1fr); */
+
+            /* grid-template-rows: repeat(3, minmax(100px auto)); */
+            /* height: 40vh; */
+        
+            /* 높이를 계속 지정하기 애매한 경우, auto 값을 사용 */
+            grid-auto-rows: minmax(200px, auto);
+        }
+        .item {
+            border: 1px solid black;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">11</div>
+        <div class="item">22</div>
+        <div class="item">33</div>
+        <div class="item">44</div>
+        <div class="item">Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+        labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
+        animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
+        aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia
+        pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
+        commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
+        proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+        eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+        Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+        culpa duis.</div>
+        <div class="item">66</div>
+        <div class="item">77</div>
+        <div class="item">88</div>
+        <div class="item">99</div>
+    </div>
+</body>
+</html>

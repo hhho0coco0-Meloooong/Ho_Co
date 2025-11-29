@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0}
+        .container {
+            background-color: lightgreen;
+            display: flex;
+            height: 100vh;
+            justify-content: space-between;
+        }
+        .item {
+            background-color: lightcoral;
+            border: 1px solid white;
+            color: #fff;
+            padding: 0.5rem;
+        }
+        /* order : item들의 배치 순서를 지정(순번) */
+        /* .item:nth-child(1) { order: 4; }
+        .item:nth-child(2) { order: 1; }
+        .item:nth-child(3) { order: 2; }
+        .item:nth-child(4) { order: 3; } */
+
+        /* align-self : 교차축에서 개별 item의 정렬 방법 지정 */
+        .item:nth-child(1) { align-self: stretch;}
+        /* 전체를 채움 */
+        .item:nth-child(2) { align-self: center;}
+        /* 중앙배치 */
+        .item:nth-child(3) { align-self: flex-start;}
+        /* 시작점 */
+        .item:nth-child(4) { align-self: flex-end;}
+        /* 종료점 */
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item">flex1</div>
+        <div class="item">flex2</div>
+        <div class="item">flex3</div>
+        <div class="item">flex4</div>
+    </div>
+</body>
+</html>

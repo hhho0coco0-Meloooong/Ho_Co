@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex_item속성(자식)</title>
+
+    <style>
+        * {margin: 0; padding: 0;}
+
+        .container {
+            background-color: lightgreen;
+            display: flex;
+        }
+
+        .item {
+            background-color: lightcoral;
+            border: 2px solid black;
+            color: white;
+            
+            /* flex-basis: 20%; */
+            /* flex-basis : item 기본 크기를 지정 / auto */
+            /* grow의 증가 너비 비율에 상관없이 요소가 가지고 있을 기본 너비를 설정 */
+            
+            flex-grow: 1;
+            /* flex-grow : container 기준으로 여분의 공간이 있을 경우, 여백에 꽉차게 표현되어지는 속성
+            item의 증가 너비 비율을 지정
+            기본값 : 0 / 숫자에 대한 비율값
+            */
+
+            flex-shrink: 1;
+            /* flex-shrink : 유연하게 줄일 수 있는 값 - 기본값(1) / 0이면 변화 없음(비율값)
+                item이 감소하는 너비의 비율 지정(숫자값이 클수록 더 많이 줄어든다.)
+            */
+
+            flex: 1 1 auto;
+            /* flex-grow + flex-shrink + flex-basis(auto) */
+        }
+        /* flex-grow : 비율값( 1 : 1 : 3 분배 ) */
+        /* .item:nth-child(1) {
+            flex-grow: 1;
+            
+            flex-shrink: 3;
+        }
+        .item:nth-child(2) {
+            flex-grow: 1;
+
+            flex-shrink: 2;
+        }
+        .item:nth-child(3) {
+            flex-grow: 3;;
+
+            flex-shrink: 1;
+        } */
+
+        .item:nth-child(3) {
+            flex: 3 0 auto;
+            /* 3 공간의 비율 */
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <!-- item 속성 -->
+    <div class="container">
+        <div class="item">flex-itemAflex-itemAflex-itemAflex-itemAflex-itemAflex-itemAflex-itemAflex-itemA</div>
+        <div class="item">flex-itemBflex-itemBflex-itemBflex-itemBflex-itemBflex-itemBflex-itemBflex-itemB</div>
+        <div class="item">flex-itemCflex-itemCflex-itemCflex-itemCflex-itemCflex-itemCflex-itemCflex-itemC</div>
+        <!-- <div class="item">flex-itemD</div> -->
+    </div>
+
+</body>
+</html>

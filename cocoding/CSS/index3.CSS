@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 10vh;
+}
+
+main {
+    width: 100%;
+    height: 60vh;
+    background: url(/bg.jpg) no-repeat fixed;
+    background-size: 100%; 
+}
+
+/* 고정값으로 표현 -> 가변그리드 변환 */
+section {
+    /* width: 1200px;
+    1200 / 1900 = 0.6315 = 63% */
+    width: 63%;
+    overflow: hidden;
+    margin: 10vh auto;
+    /* 100px */
+
+    background-color: lightgreen;
+}
+
+article {
+    overflow: hidden;
+    margin: 5vh 0;
+    height: 400px; /* 부모기준 */
+
+    background-color: lightcyan;
+}
+
+.img {
+    /* width: 720px; */
+    /* 720 / 1200 = 60% */
+    width: 60%;
+    height: 100%;
+    float: left;
+    text-align: center;
+
+    /* line-height: 400px; */
+
+    /* padding: 30px; */
+    /* 30 / 720  = 4.1*/
+    padding: 3%;
+    box-sizing: border-box;
+    background-color: lightskyblue;
+}
+
+p {
+    /* width: 430px; */
+    /* 430 / 1200 = 35.83 */
+    width: 35.83%;
+    height: 400px;
+    float: right;
+}
+
+@media screen and (max-width: 1024px) {
+    .img {
+        width: 50%;
+    }
+
+    p {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    article {
+        height: auto;
+    }
+    .img {
+        width: 100%;
+        height: 50vh;
+    }
+
+    p {
+        width: 100%;
+        height: auto;
+    }
+}

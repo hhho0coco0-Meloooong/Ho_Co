@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport : 반응형 적용 시 필수 적용 
+    웹페이지의 너비를 기기의 화면 폭으로 설정 
+    처음 페이지에서 원래 크기를 사용하도록 설정 -->
+    <title>반응형_미디어쿼리</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: lightgreen;
+        }
+
+        /* 미디어쿼리 선언  */
+        @media screen and (min-width: 1024px) {
+            /* and 뒤 띄어쓰기 필수 */
+            /* 내가 보고있는 화면사이즈 1024px 이상 화면기준 */
+            body {
+                background-color: lightgoldenrodyellow;
+            }
+        }
+
+        @media screen and (max-width: 1023px) {
+            /* 내가 보고있는 화면사이즈 1023px 이하 화면기준
+            1023 : 최대치 */
+
+            body {background-color:  lightcoral;}
+        }
+
+        @media screen and (min-width: 480px) and (max-width: 767px) {
+            /* 480 ~ 767px */
+            body {
+                background-color: lightskyblue;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

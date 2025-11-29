@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    color: #333;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+ul,li,ol {
+    list-style: none;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    overflow: hidden;
+    border-bottom: 1px solid black;
+}
+
+header>a {
+    float: left;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 10vh;
+    padding: 0 30px;
+}
+
+header ul {
+    float: right;
+    display: flex;
+    height: 10vh;
+    /* flex-direction: 나열방법 수직 수평 */
+    align-items: center;
+}
+
+header li {
+    padding: 0 30px;
+}
+
+.container {
+    /* item - nav, section, aside */
+    display: flex;
+}
+
+nav {
+    flex: 1 1 15%;
+    height: 80vh;
+    border-right: 1px solid black;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+nav>h1 {
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.keyword {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.item {
+    border: 1px solid black;
+    padding: 3px;
+    margin: 4px;
+    font-size: 10px;
+}
+
+section {
+    height: 80vh;
+    flex: 1 1 70%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.contents {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-wrap : 자동 줄 바꿈 */
+}
+
+.img-item {
+    width: 31.3%;
+    background: url(/bg.jpg) no-repeat center center;
+    background-size: cover;
+    margin: 0.1%;
+    margin-bottom: 3vh;
+    height: 22.5vh;
+}
+
+aside {
+    flex: 1 1 15%;
+    border-left: 1px solid black;
+    height: 80vh;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+aside h1 {
+    margin-bottom: 20px;
+}
+
+footer {
+    width: 100%;
+    height: 10vh;
+    border-top: 1px solid black;
+    text-align: center;
+    line-height: 10vh;
+}
+
+@media screen and (max-width:1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    nav {
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+
+    aside {
+        border-left: none;
+        border-top: 1px solid black;
+    }
+
+    .img-item {
+        margin-bottom: 1vh;
+    }
+}
+
+@media screen and (max-width:768px) {
+    header ul {
+        display: none;
+    }
+
+    .img-item {
+        width: 48%;
+        margin: 1%;
+        height: 20.5vh;
+    }
+
+    nav {
+        order: 2;
+        /* nav(1 > 2), section(2 > 3), aside(3 > 1) */
+    }
+
+    section {
+        order: 3;
+    }
+
+    aside {
+        order: 1;
+        border: none;
+        background-color: #000;
+        color: #fff;
+
+    }
+}

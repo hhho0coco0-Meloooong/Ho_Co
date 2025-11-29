@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        .container{
+          padding: 10px;
+          background-color: antiquewhite; 
+          display: grid; 
+          grid-template-columns: repeat(4,1fr);
+          height: 50vh;
+        }
+        .item {
+            background-color: violet;
+            border: 3px solid #000;
+            /* 아이템을 세로축 방향으로 정렬 - stretch(기본값)
+            align-self: start;
+            align-self: center;
+            align-self: end; */
+             /* 아이템을 가로축 방향으로 정렬 - stretch(기본값) 
+            justify-self: stretch;
+            justify-self: start;
+            justify-self: center;
+            justify-self: end; */
+            z-index: 101;
+        }
+
+
+        /* .item:nth-child(2){
+            order: 1;
+            순서변경
+        } */
+
+        .item:nth-child(3):hover{
+            background-color: aqua; 
+            transform: scale(2); 
+            transition: 0.5s;
+        }
+        .item:nth-child(3){
+            z-index: 100;
+        }
+
+
+
+
+        
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">grid-1</div>
+        <div class="item">grid-2</div>
+        <div class="item">grid-3</div>
+        <div class="item">grid-4</div>
+        <div class="item">grid-5</div>
+        <div class="item">grid-6</div>
+        <div class="item">grid-7</div>
+        <div class="item">grid-8</div>
+        <div class="item">grid-9</div>
+        <div class="item">grid-10</div>
+        <div class="item">grid-11</div>
+        <div class="item">grid-12</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 개념_container</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: lightgreen;
+            display: flex;
+            /* 부모에서 선언 > item이 flex 요소로 나열
+            flex
+            inline-flex : 글자의 성격을 가진 플레스-컨테이로 만듦
+             */
+        }
+
+        .item {
+            background-color: lightcoral;
+            border: 1px solid #000;
+            margin: 5px;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- FLEX구조 : 부모FLEX > 자식FLEX -->
+    <!-- display : flex 선언  -->
+    <div class="container">
+        <div class="item">flex_AA</div>
+        <div class="item">flex_BB</div>
+        <div class="item">flex_CC</div>
+    </div>
+</body>
+</html>

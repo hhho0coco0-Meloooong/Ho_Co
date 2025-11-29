@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex_container(부모) 속성</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: lightgreen;
+            display: inline-flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* nowrap : 원래 한 줄의 성격 */
+            /* wrap : item의 줄을 바꿀 때 사용하게 됨
+            공간이 없을 경우, 다음줄로 이동(역방향 / 반대로, reverse) */
+
+            /* flex-flow : flex-direction + flex-wrap */
+        }
+
+        .item {
+            background-color: lightcoral;
+            border: 1px solid #000;
+            margin: 5px;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 2) flex-wrap : flex_container의 크기 기준 변동이
+    있을 경우, item들을 어떻게 보일지 결정
+    nowrap 기본값(한줄 표현) -->
+    <div class="container">
+        <div class="item">flex_AAAAAAAAA</div>
+        <div class="item">flex_BBBBBBBBB</div>
+        <div class="item">flex_CCCCCCCCC</div>
+        <div class="item">flex_DDDDDDDDD</div>
+        <div class="item">flex_EEEEEEEEE</div>
+        <div class="item">flex_FFFFFFFFF</div>
+    </div>
+</body>
+</html>
