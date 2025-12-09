@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre></pre>
+    <script>
+
+        // 객체 생성
+        const xhr = new XMLHttpRequest();
+
+        // http 요청 초기화
+        // persons 리소스에서 id를 사용하여, 특정 person 취득
+        xhr.open("GET", "/persons/1");
+
+        // http 요청 전송
+        xhr.send();
+
+        
+    </script>
+</body>
+</html>
